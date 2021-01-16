@@ -98,7 +98,7 @@ func (receiver *FrameSizes) Next() bool {
 	_, _, errorNumber := unix.Syscall(
 		unix.SYS_IOCTL,
 		uintptr(device.fileDescriptor),
-		const_VIDIOC_ENUM_FRAMESIZES,
+		CONST_VIDIOC_ENUM_FRAMESIZES,
 		uintptr(unsafe.Pointer(&receiver.datum)),
 	)
 	if unix.EINVAL == errorNumber {
