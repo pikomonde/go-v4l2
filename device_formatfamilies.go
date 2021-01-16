@@ -119,7 +119,7 @@ func (receiver *FormatFamilies) Next() bool {
 	_, _, errorNumber := unix.Syscall(
 		unix.SYS_IOCTL,
 		uintptr(device.fileDescriptor),
-		const_VIDIOC_ENUM_FMT,
+		CONST_VIDIOC_ENUM_FMT,
 		uintptr(unsafe.Pointer(&receiver.datum)),
 	)
 	if unix.EINVAL == errorNumber {

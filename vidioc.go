@@ -12,42 +12,42 @@ const (
 	// A Golang conversion of the following C code:
 	//
 	// #define  VIDIOC_QUERYCAP  _IOR('V',  0, struct v4l2_capability)
-	const_VIDIOC_QUERYCAP = (const_IOC_READ                      << const_IOC_DIRSHIFT)  |
-	                        (uintptr('V')                        << const_IOC_TYPESHIFT) |
-	                        (0                                   << const_IOC_NRSHIFT)   |
-	                        (unsafe.Sizeof(internalCapability{}) << const_IOC_SIZESHIFT)
+	CONST_VIDIOC_QUERYCAP = (CONST_IOC_READ                      << CONST_IOC_DIRSHIFT)  |
+	                        (uintptr('V')                        << CONST_IOC_TYPESHIFT) |
+	                        (0                                   << CONST_IOC_NRSHIFT)   |
+	                        (unsafe.Sizeof(internalCapability{}) << CONST_IOC_SIZESHIFT)
 
 	// A Golang conversion of the following C code:
 	//
 	// #define  VIDIOC_RESERVED   _IO('V',  1)
-	const_VIDIOC_RESERVED = (const_IOC_NONE                      << const_IOC_DIRSHIFT)  |
-	                        (uintptr('V')                        << const_IOC_TYPESHIFT) |
-	                        (1                                   << const_IOC_NRSHIFT)   |
-	                        (0                                   << const_IOC_SIZESHIFT)
+	CONST_VIDIOC_RESERVED = (CONST_IOC_NONE                      << CONST_IOC_DIRSHIFT)  |
+	                        (uintptr('V')                        << CONST_IOC_TYPESHIFT) |
+	                        (1                                   << CONST_IOC_NRSHIFT)   |
+	                        (0                                   << CONST_IOC_SIZESHIFT)
 
 	// A Golang conversion of the following C code:
 	//
 	// #define  VIDIOC_ENUM_FMT _IOWR('V',  2, struct v4l2_fmtdesc)
-	const_VIDIOC_ENUM_FMT = ((const_IOC_READ | const_IOC_WRITE)     << const_IOC_DIRSHIFT)  |
-	                        (uintptr('V')                           << const_IOC_TYPESHIFT) |
-	                        (2                                      << const_IOC_NRSHIFT)   |
-	                        (unsafe.Sizeof(internalFormatFamily{})  << const_IOC_SIZESHIFT)
+	CONST_VIDIOC_ENUM_FMT = ((CONST_IOC_READ | CONST_IOC_WRITE)     << CONST_IOC_DIRSHIFT)  |
+	                        (uintptr('V')                           << CONST_IOC_TYPESHIFT) |
+	                        (2                                      << CONST_IOC_NRSHIFT)   |
+	                        (unsafe.Sizeof(internalFormatFamily{})  << CONST_IOC_SIZESHIFT)
 
 	// A Golang conversion of the following C code:
 	//
 	// #define VIDIOC_S_FMT     _IOWR('V',  5, struct v4l2_format)
-	const_VIDIOC_S_FMT = ((const_IOC_READ | const_IOC_WRITE)    << const_IOC_DIRSHIFT)  |
-	                        (uintptr('V')                       << const_IOC_TYPESHIFT) |
-	                        (5                                  << const_IOC_NRSHIFT)   |
-	                        (unsafe.Sizeof(v4l2_format.Type{})  << const_IOC_SIZESHIFT)
+	CONST_VIDIOC_S_FMT = ((CONST_IOC_READ | CONST_IOC_WRITE)    << CONST_IOC_DIRSHIFT)  |
+	                        (uintptr('V')                       << CONST_IOC_TYPESHIFT) |
+	                        (5                                  << CONST_IOC_NRSHIFT)   |
+	                        (unsafe.Sizeof(v4l2_format.Type{})  << CONST_IOC_SIZESHIFT)
 
 	// A Golang conversion of the following C code:
 	//
 	// #define VIDIOC_ENUM_FRAMESIZES  _IOWR('V', 74, struct v4l2_frmsizeenum)
-	const_VIDIOC_ENUM_FRAMESIZES = ((const_IOC_READ | const_IOC_WRITE)    << const_IOC_DIRSHIFT)  |
-	                               (uintptr('V')                          << const_IOC_TYPESHIFT) |
-	                               (74                                    << const_IOC_NRSHIFT)   |
-	                               (unsafe.Sizeof(v4l2_framesize.Type{})  << const_IOC_SIZESHIFT)
+	CONST_VIDIOC_ENUM_FRAMESIZES = ((CONST_IOC_READ | CONST_IOC_WRITE)    << CONST_IOC_DIRSHIFT)  |
+	                               (uintptr('V')                          << CONST_IOC_TYPESHIFT) |
+	                               (74                                    << CONST_IOC_NRSHIFT)   |
+	                               (unsafe.Sizeof(v4l2_framesize.Type{})  << CONST_IOC_SIZESHIFT)
 
 )
 

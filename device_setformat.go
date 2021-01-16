@@ -18,7 +18,7 @@ func (receiver *Device) SetFormat(formatcaster v4l2_format.Caster) error {
 	_, _, errorNumber := unix.Syscall(
 		unix.SYS_IOCTL,
 		uintptr(receiver.fileDescriptor),
-		const_VIDIOC_S_FMT,
+		CONST_VIDIOC_S_FMT,
 		uintptr(unsafe.Pointer(&format)),
 	)
 	if 0 != errorNumber {

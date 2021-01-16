@@ -38,7 +38,7 @@ func (receiver *internalCapability) QueryFd(fileDesciptor int) error {
 	_, _, errorNumber := unix.Syscall(
 		unix.SYS_IOCTL,
 		uintptr(fileDesciptor),
-		const_VIDIOC_QUERYCAP,
+		CONST_VIDIOC_QUERYCAP,
 		uintptr(unsafe.Pointer(receiver)),
 	)
 	if 0 != errorNumber {
